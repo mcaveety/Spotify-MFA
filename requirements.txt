@@ -1,0 +1,5 @@
+flask
+Flask-Session
+twilio
+python-dotenv
+bcrypt

@@ -1,0 +1,131 @@
+/*
+Spotify color palette examples
+https://www.pinterest.com/pin/181199584990764527/
+https://i.pinimg.com/736x/a8/b0/e2/a8b0e29ba5564857e87933bc00a8af5b.jpg
+https://developer.spotify.com/documentation/general/design-and-branding/#using-our-colors
+Green: #1DB954
+White: #FFFFFF
+Black: #191414
+ */
+
+/* General */
+
+* {
+    font-family: "Arial", "Verdana";
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background: #1DB954;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #191414;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+header {
+    padding: 5px;
+    display: flex;
+    background: #191414;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+/* Classes */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_display {
+    padding: 15px;
+    border-style: solid;
+    border-color: red;
+    border-radius: 20px;
+}
+
+.header_btn {
+    border-color: #FFFFFF;
+}
+
+.header_elements_padding {
+    padding: 0 10px;
+}
+
+.header_padding {
+    padding: 0 25px;
+}
+
+.form_submit {
+    margin: 15px;
+    width: 100px;
+    height: 40px;
+    background: #1DB954;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #191414;
+}
+
+.input_mobile {
+    width: 325px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.input_text {
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.left_header {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.link {
+    text-decoration: underline;
+    color: blue;
+}
+
+.main_content_box {
+    margin: 15px;
+    padding: 10px;
+    border-style: hidden;
+}
+
+.nav_btn {
+    border-color: #191414;
+}
+
+.right_header {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
+    width: 50%;
+}

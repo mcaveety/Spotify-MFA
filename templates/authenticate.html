@@ -1,0 +1,49 @@
+<!--
+Authentication page to verify user via SMS 2-FA
+Allows the user to enter the code they received at their phone number
+-->
+
+<!-- Extends base file -->
+{% extends "base.html" %}
+
+{% block title %}Authenticate | Spotify 2-FA{% endblock %}
+
+{% block content %}
+
+    <!-- Accepts authentication code -->
+    <div class="main_content_box">
+    <h2 class="center">Enter the 6-digit authentication code that was texted to your account's mobile number.</h2>
+    <div class="center">
+            <form method="post">
+                <input type="text" name="code_textbox" minlength="6" maxlength="6" autocomplete="off" class="center input_text">
+                <div class="center">
+                    <input type="submit" id="submit_code" class="center form_submit">
+                </div>
+            </form>
+    </div>
+    </div>
+
+
+    <!-- Prints error if authentication failed -->
+    {% if error %}
+    <div class="center">
+        <h3 class="error_display">Authentication failed. Re-try, or click to resend the code.</h3>
+    </div>
+    <div class="center">
+        <button onclick="resend()" type="submit" id="resend_code" style="width:150px">Resend Code</button>
+    </div>
+
+</div>
+    <h4 id="error-message-resend" style="display: none;"></h4>
+
+    {% endif %}
+
+<!--
+JavaScript to control authentication code submission,
+resending codes, and displaying errors if authentication failed
+-->
+    {% block javascript %}
+    <script src="{{ url_for('static', filename='authenticate.js') }}"> </script>
+    {% endblock %}
+
+{% endblock %}

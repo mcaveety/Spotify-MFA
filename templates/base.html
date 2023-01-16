@@ -1,0 +1,83 @@
+<!--
+Base HTML file with header displayed across pages
+Contains basic information about the program that persists
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Spotify Conceptual 2-FA{% endblock %}</title>
+
+        <!-- Links to JavaScript int-tel-input plugin and local CSS stylesheet -->
+        <link rel="icon" href="/static/assets/badge_icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+        <link rel="stylesheet" href="/static/stylesheet.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </head>
+
+    <body>
+
+
+    <!--
+    Page Header
+    Contains title and navigation buttons
+    -->
+
+
+    <header>
+
+        <div class="left_header header_padding">
+            <a href="{{ url_for('home_route') }}"><img src="/static/assets/Spotify_Icon_RGB_Green.png" width="55px" class="header_elements_padding"></a>
+            <a href="{{ url_for('home_route') }}"><h2 class="header_elements_padding">Spotify Conceptual 2-FA</h2></a>
+        </div>
+
+
+        <div class="right_header header_padding">
+            <a href="{{ url_for('home_route') }}" class="header_elements_padding"><button class="header_btn">Home</button></a>
+            <a href="{{ url_for('register_route_get') }}" class="header_elements_padding"><button class="header_btn">Register</button></a>
+            <a href="{{ url_for('login_route_get') }}" class="header_elements_padding"><button class="header_btn">Login</button></a>
+            <a href="{{ url_for('landing_route') }}" class="header_elements_padding"><img src="/static/assets/white_account_icon.png" height="40px" alt="Account"></a>
+            <!-- Add account button with person clipart -->
+        </div>
+
+    </header>
+
+    <!--
+    Extends HTML template
+    Content inside varies page by page
+    -->
+
+    {% block content %}
+
+    <!-- Project description on home page -->
+    <div class="main_content_box">
+        <h2 class="center">Spotify Conceptual MFA</h2>
+        <h3 class="center">Features:</h3>
+        <div class="center">
+        <ul>
+            <li>Local user database storage</li>
+            <li>Unique username and mobile number constraints</li>
+            <li>Mobile number verification system to prevent fake number usage</li>
+            <li>Country code mobile number dropdown for ease of use</li>
+            <li>Password hashing to secure data</li>
+            <li>Fetch API and JSON data used to more securely transmit data</li>
+            <li>6-Digit SMS code verification used to authenticate users</li>
+            <li>Powered by
+                <a href="https://www.twilio.com/" class="link">Twilio</a>,
+                <a href="https://flask.palletsprojects.com/en/2.0.x/" class="link">Flask</a>, and
+                <a href="https://sqlite.org/index.html" class="link">SQLite3</a>
+            </li>
+        </ul>
+        </div>
+        <div class="center">
+            <a href="https://github.com/meepowlz/Spotify-MFA" target="_blank"><button class="center nav_btn">GitHub</button></a>
+        </div>
+    </div>
+
+
+    {% endblock %}
+
+    </body>
+</html>

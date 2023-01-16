@@ -1,0 +1,22 @@
+<!--
+The page the user lands on after successful login and authentication
+Contains username and basic information
+-->
+
+<!-- Extends base file -->
+{% extends "base.html" %}
+
+{% block title %}Landing | Spotify 2-FA{% endblock %}
+
+{% block content %}
+
+<!-- User account information  & logout-->
+
+<div class="main_content_box">
+    <h3 class="center">You are logged in as: {{ username }}</h3>
+    <div class="center">
+        <a href="http://localhost:8080/logout"><button class="nav_btn">Logout</button></a>
+    </div>
+</div>
+
+{% endblock %}
